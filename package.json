@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/StacieKot/node-file-manager.git"
   },
-  "author": "",
+  "author": "StacieKot",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/StacieKot/node-file-manager/issues"

@@ -11,7 +11,11 @@ import { os } from "./os/os.js";
 import { hash } from "./hash/hash.js";
 import { compress } from "./zip/compress.js";
 import { decompress } from "./zip/decompress.js";
-import { printDirectory, throwInvalidInputError } from "../utils.js";
+import {
+  parseInput,
+  printDirectory,
+  throwInvalidInputError,
+} from "../utils.js";
 
 const commandHandlers = {
   up,
@@ -30,7 +34,7 @@ const commandHandlers = {
 };
 
 export const handleCommand = async (input) => {
-  const userInput = input.trim().split(/\s+/g);
+  const userInput = parseInput(input);
 
   const [command, ...args] = userInput;
 

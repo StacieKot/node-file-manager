@@ -1,4 +1,4 @@
-export const DEFAULT_USER_NAME = "Username";
+export const DEFAULT_USER_NAME = "Anonymous";
 
 export const EXIT = ".exit";
 

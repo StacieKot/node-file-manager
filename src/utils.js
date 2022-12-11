@@ -12,3 +12,10 @@ export const printDirectory = () => {
 export const throwInvalidInputError = () => {
   throw new Error(ERRORS.invalidInput);
 };
+
+export const parseInput = (input) => {
+  const userInput = input.trim().match(/(".*?"|'.*?'|[^\s]+)/g);
+  return userInput.map((value) =>
+    value.replace(/^["'](.+(?=["']$))["']$/, "$1")
+  );
+};
