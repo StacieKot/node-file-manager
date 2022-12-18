@@ -1,4 +1,4 @@
-import { EOL, cpus, hostname, userInfo, arch } from "node:os";
+import { EOL, cpus, homedir, userInfo, arch } from "node:os";
 import { ERRORS } from "../../constants.js";
 import { validateUserInput } from "../utils/index.js";
 import { OS_COMMAND } from "./constants.js";
@@ -22,7 +22,7 @@ export const os = (...args) => {
       console.table(info);
       break;
     case OS_COMMAND.homedir:
-      console.log(hostname());
+      console.log(homedir());
       break;
     case OS_COMMAND.username:
       console.log(userInfo().username);
